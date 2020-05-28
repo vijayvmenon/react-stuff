@@ -10,7 +10,7 @@ export default function LandingPage(props) {
       <AppBar position="static">
         <Toolbar>
         <div style={{color:"white"}}>
-            <Link to="/">HOME</Link>
+            <Link to="/">MY APP</Link>
           </div>
           <div style={{marginLeft:24,color:"white"}}>
             <Link to="/todo">To do App</Link>
