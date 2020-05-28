@@ -6,20 +6,18 @@ export default function ToDoApp(props) {
  const [value,setValue] = useState("");
 const [list,setList] = useState(localStorage.getItem("todo") ? JSON.parse(localStorage.getItem("todo")) : {});
 
- useEffect(() => {
-    localStorage.getItem("todo") !== null ? localStorage.setItem("todo",list) : localStorage.setItem("todo",[])
- },[]);
 
  useEffect(() => {
      console.log("running useEffect",list);
+     localStorage.getItem("todo") !== null ? localStorage.setItem("todo",list) : localStorage.setItem("todo",[])
     localStorage.setItem("todo",JSON.stringify(list));
  },[list])
 
  console.log(localStorage.getItem("todo"),list);
 
     return (
-        <div>
-            To do App 
+        <div style={{display:"flex",flexDirection:"column"}}>
+            <div>To do App </div>
             <TextField value={value} label="Enter Item" onChange={(e) => setValue(e.target.value)} />
             <Button onClick={() => {
                 const idx = Object.keys(list).length;

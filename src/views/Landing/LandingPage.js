@@ -1,5 +1,5 @@
-import React, { useState, useEffect, Fragment } from "react";
-import { TextField, Button, AppBar, Toolbar } from "@material-ui/core";
+import React, {Fragment } from "react";
+import { AppBar, Toolbar } from "@material-ui/core";
 import { Route, Switch, Link } from "react-router-dom";
 import ToDoComponent from "../../components/Todo/todo";
 import ReduxAdvanced from "../../components/Redux/reduxAdvanced";
